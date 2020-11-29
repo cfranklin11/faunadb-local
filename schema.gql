@@ -9,3 +9,8 @@ type Post {
   text: String!
   author: User
 }
+
+type Query {
+  allUsers: [User!]
+  allPosts: [Post!]
+}
