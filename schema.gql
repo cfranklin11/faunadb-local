@@ -1,0 +1,16 @@
+type User {
+  username: String! @unique
+  password: String!
+  posts: [Post!] @relation
+}
+
+type Post {
+  title: String!
+  text: String!
+  author: User
+}
+
+type Query {
+  allUsers: [User!]
+  allPosts: [Post!]
+}
